@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/jsp/hello.jsp</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/service/PriceIncrease.java</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/classes/messages.properties</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/web.xml</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/web/InventoryController.java</file>
+            <file>file:/D:/DEC/SpringNew/web/redirect.jsp</file>
+            <file>file:/D:/DEC/SpringNew/nbproject/build-impl.xml</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/jsp/include.jsp</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/jsp/priceincrease.jsp</file>
+            <file>file:/D:/DEC/SpringNew/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/D:/DEC/SpringNew/web/index.jsp</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/service/SimpleProductManager.java</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/service/PriceIncreaseValidator.java</file>
+            <file>file:/D:/DEC/SpringNew/test/springnew/web/InventoryControllerTests.java</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/web/PriceIncreaseFormController.java</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/domain/Product.java</file>
+            <file>file:/D:/DEC/SpringNew/src/java/springnew/service/ProductManager.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -10,7 +10,37 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
-    <bean name="/hello.htm" class="springnew.web.HelloController"/> 
+    <bean id="productManager" class="springnew.service.SimpleProductManager">
+        <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+        </property>
+    </bean> 
+    <bean id="product1" class="springnew.domain.Product">
+        <property name="description" value="Lamp"/>
+        <property name="price" value="5.75"/>
+    </bean>        
+    <bean id="product2" class="springnew.domain.Product">
+        <property name="description" value="Table"/>
+        <property name="price" value="75.25"/>
+    </bean> 
+
+    <bean id="product3" class="springnew.domain.Product">
+        <property name="description" value="Chair"/>
+        <property name="price" value="22.79"/>
+    </bean> 
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+    </bean> 
+
+    <bean  class="springnew.web.InventoryController">
+        <property name="productManager" ref="productManager"/>
+
+    </bean> 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -23,7 +53,19 @@
             </props>
         </property>
     </bean>
-
+    
+    <bean  class="springnew.web.PriceIncreaseFormController">
+        <property name="sessionForm" value="true"/>
+        <property name="commandName" value="priceIncrease"/>
+        <property name="commandClass" value="springnew.service.PriceIncrease"/>
+        <property name="validator">
+            <bean class="springnew.service.PriceIncreaseValidator"/>
+        </property>
+        <property name="formView" value="priceincrease"/>
+        <property name="successView" value="inventory.htm"/>
+        <property name="productManager" ref="productManager"/>
+    </bean> 
+    
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/jsp/"

@@ -8,9 +8,25 @@
 <!DOCTYPE html>
 
 <html>
-  <head><title>Hello :: Spring Application</title></head>
+  <head><title>Title</title></head>
+
   <body>
-    <h1>Hello - Spring Application</h1>
-    <p>Greetings, it is now <c:out value="${now}"/></p>
+
+    <h1>Heading</h1>
+
+    <p>Greetings, it is now<c:out value="${model.now}"/></p>
+
+    <h3>Products</h3>
+
+    <c:forEach items="${model.products}" var="prod">
+
+      <c:out value="${prod.description}"/> <i>$<c:out value="${prod.price}"/></i><br><br>
+
+    </c:forEach>
+    <br>
+
+    <a href="<c:url value="priceincreaseform.htm"/>">Increase Prices</a>
+
+    <br>
   </body>
 </html>
